@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>AI-Powered Task Manager</h1>
+
+      <section class="card">
+        <h2>Add Task</h2>
+        <form id="manual-task-form" class="row">
+          <input id="manual-task-title" type="text" placeholder="Task title" required />
+          <select id="manual-task-category">
+            <option value="" selected>Select category (optional)</option>
+          </select>
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Brain Dump</h2>
+        <p class="hint">Capture free-form notes, voice-to-text, or raw thoughts. Convert with AI when ready.</p>
+        <textarea
+          id="brain-dump-input"
+          rows="7"
+          placeholder="Type everything on your mind here..."
+        ></textarea>
+        <div class="actions">
+          <button id="convert-brain-dump">Convert to Tasks</button>
+          <span id="convert-status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Tasks</h2>
+        <ul id="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
