@@ -1,0 +1,12 @@
+{
+  "name": "productivity",
+  "version": "1.0.0",
+  "description": "AI-powered task manager with brain dump to task conversion",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  }
+}
